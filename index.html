@@ -9,5 +9,20 @@
 </head>
 <body>
   
+  <div id="content"></div>>
+
+  <script type="text/jsx">
+      var DemoComponent = React.createClass({
+        render: function() {
+          return(
+              <h2>First H2 line test</h2>
+          );
+        }
+      });
+
+      React.render(<DemoComponent />, document.getElementById('content'));
+
+  </script>
+
 </body>
 </html>
