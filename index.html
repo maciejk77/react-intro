@@ -15,17 +15,18 @@
       var DemoComponent = React.createClass({
         render: function() {
           return(
-              <h2>{this.props.origin} footballer is {this.props.player}</h2>
+              <div>
+                <h3>{this.props.player}</h3>
+                <p>{this.props.children}</p>
+              </div>
           );
         }
       });
 
       React.render(
         <div>
-          <DemoComponent origin="Argentine" player="Messi"/>
-          <DemoComponent origin="German" player="Moller"/>
-          <DemoComponent origin="Polish" player="Lewandowski"/>
-          <DemoComponent origin="French" player="Giroud"/>
+          <DemoComponent player="Messi">The most successful football player worldwide</DemoComponent>
+          <DemoComponent player="Pele">The highest scoring football player</DemoComponent>
         </div>, 
         document.getElementById('content'));
 
