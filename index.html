@@ -15,12 +15,19 @@
       var DemoComponent = React.createClass({
         render: function() {
           return(
-              <h2>First H2 line test</h2>
+              <h2>{this.props.origin} footballer is {this.props.player}</h2>
           );
         }
       });
 
-      React.render(<DemoComponent />, document.getElementById('content'));
+      React.render(
+        <div>
+          <DemoComponent origin="Argentine" player="Messi"/>
+          <DemoComponent origin="German" player="Moller"/>
+          <DemoComponent origin="Polish" player="Lewandowski"/>
+          <DemoComponent origin="French" player="Giroud"/>
+        </div>, 
+        document.getElementById('content'));
 
   </script>
 
